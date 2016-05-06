@@ -106,7 +106,7 @@ end
 
 def validate_plugins()
   required_plugins = [
-    'vagrant-hostmanager',
+    #'vagrant-hostmanager',
   ]
   missing_plugins = []
 
@@ -169,9 +169,9 @@ Vagrant.configure(2) do |config|
   validate_plugins || exit(1)
 
   # configure vagrant-hostmanager plugin
-  config.hostmanager.enabled = true
-  config.hostmanager.manage_host = true
-  config.hostmanager.ignore_private_ip = false
+  # config.hostmanager.enabled = true
+  # config.hostmanager.manage_host = true
+  # config.hostmanager.ignore_private_ip = false
 
   # configure vagrant-vbguest plugin
   if Vagrant.has_plugin?('vagrant-vbguest')
@@ -195,7 +195,7 @@ Vagrant.configure(2) do |config|
 
       # custom hostname aliases
       if machine_type['aliases']
-        machine.hostmanager.aliases = %Q(#{machine_type['aliases'].join(' ')})
+        #machine.hostmanager.aliases = %Q(#{machine_type['aliases'].join(' ')})
       end
 
       # custom mount type

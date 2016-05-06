@@ -1,6 +1,6 @@
 ---
 cluster_name: dcos-vagrant
-bootstrap_url: http://boot.dcos
+bootstrap_url: http://192.168.65.50
 exhibitor_storage_backend: zookeeper
 exhibitor_zk_hosts: 192.168.65.50:2181
 exhibitor_zk_path: /dcos
